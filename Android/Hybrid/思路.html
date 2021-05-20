@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/FullStackRoad/assets/css/0.styles.a3d6c78d.css" as="style"><link rel="preload" href="/FullStackRoad/assets/js/app.8add03af.js" as="script"><link rel="preload" href="/FullStackRoad/assets/js/2.7ea6bbd6.js" as="script"><link rel="preload" href="/FullStackRoad/assets/js/8.19d26077.js" as="script"><link rel="prefetch" href="/FullStackRoad/assets/js/10.375eb0ca.js"><link rel="prefetch" href="/FullStackRoad/assets/js/3.b9631ecf.js"><link rel="prefetch" href="/FullStackRoad/assets/js/4.2c3e96fd.js"><link rel="prefetch" href="/FullStackRoad/assets/js/5.4cab887c.js"><link rel="prefetch" href="/FullStackRoad/assets/js/6.a5f8331f.js"><link rel="prefetch" href="/FullStackRoad/assets/js/7.8118df13.js"><link rel="prefetch" href="/FullStackRoad/assets/js/9.988517f5.js">
+    <link rel="stylesheet" href="/FullStackRoad/assets/css/0.styles.a3d6c78d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/FullStackRoad/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-1-native调用js" class="sidebar-link">1.1. Native调用JS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-1-1-void-loadurl-javascript-function" class="sidebar-link">1.1.1. void loadUrl(&quot;javascript://function(...);&quot;)</a></li><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-1-2-void-evaluatejavascript-script-resultcallback" class="sidebar-link">1.1.2. void evaluateJavascript(script, resultCallback)</a></li><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-1-3-对比" class="sidebar-link">1.1.3. 对比</a></li></ul></li><li><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-2-js调用native" class="sidebar-link">1.2. JS调用Native</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-2-1-注入api-js上下文注入" class="sidebar-link">1.2.1 注入API（JS上下文注入）</a></li><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-2-2-拦截url-scheme" class="sidebar-link">1.2.2. 拦截URL Scheme</a></li><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-2-3-拦截prompt" class="sidebar-link">1.2.3 拦截Prompt</a></li><li class="sidebar-sub-header"><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-2-4-对比" class="sidebar-link">1.2.4 对比</a></li></ul></li><li><a href="/FullStackRoad/Android/Hybrid/%E6%80%9D%E8%B7%AF.html#_1-3-自定义方案" class="sidebar-link">1.3 自定义方案</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>Hybrid Web可以提供Native和Web的混合开发方案，比如在弱交互场景下使用Hybrid Web，在强交互场景下使用Native，在牺牲少量交互的前提下，提高整体开发效率。</p> <p>开发思路大致如下：</p> <ol><li>实现Native与Javascript相互通信</li> <li>实现WebView容器</li> <li>定义API，实现对应的功能</li> <li>提升交互体验，例如离线方案等</li> <li>WebView和通信机制均以API 19作为分界点实现两种不同方案
+1）API 19以前WebView不基于Chromium<br>
+2）API 17以前J2N会安全漏洞，API 19以前N2J没有回调不能直接获取调用结果</li></ol> <h1 id="_1-native-javascript">1. Native &lt;--&gt; Javascript</h1> <p>Hybrid Web在利用Web高开发效率时，可以让Web调用Native的部分功能，通过Native来提高Web业务场景下的交互友好度。因此，开发Hybrid Web的第一步就是打通Native和Web间的通信。</p> <h2 id="_1-1-native调用js">1.1. Native调用JS</h2> <p>Native调用Javascript的方法有<code>WebView.loadUrl()</code>和<code>WebView.evaluateJavascript()</code>两种。</p> <h3 id="_1-1-1-void-loadurl-javascript-function">1.1.1. void loadUrl(&quot;javascript://function(...);&quot;)</h3> <p>loadUrl支持所有版本，兼容性高，但该机制存在多个缺陷：</p> <ul><li>Android无法获取Js方法的返回值（iOS可以），同步态</li> <li>Android无法通过回调接口注册回调方法（iOS可以？？？），异步态</li> <li>Native调用的JS方法必须在访问的JS脚本中实现，但即使没有实现也不会报错</li> <li>会刷新页面？？？</li></ul> <div class="language- extra-class"><pre class="language-text"><code># Java
+WebView webview = findViewById(R.id.webView);
+webview.loadUrl(&quot;javascript://show('test');&quot;);
+webview.loadUrl(&quot;javascript://showReturn('test');&quot;);
+webview.loadUrl(&quot;javascript://showCallback('test', callback);&quot;);
+
+# Javascript
+&lt;script language=javascript&gt;
+   function show(str) {
+      alert(str);
+   }
+    
+   # Android无法获取Js方法的返回值。
+   # 因此，Native无法收到同步返回值“result”
+   function showReturn(str) {
+      return &quot;result&quot;;
+   }
+   
+   # Android无法通过回调接口注册回调方法。
+   # 因此，Native注册的callback回调方法没用。
+   function showCallback(str, callback) {
+       alert(str);
+       callback(&quot;result&quot;);
+   }
+&lt;/script&gt;
+</code></pre></div><h3 id="_1-1-2-void-evaluatejavascript-script-resultcallback">1.1.2. void evaluateJavascript(script, resultCallback)</h3> <p>evaluateJavascript是Android在Kitkat（4.4 API 19）才引入的接口。该接口可以解决<code>loadUrl()</code>无法注册回调的缺陷，同时性能更好，也不会刷新页面。</p> <div class="language- extra-class"><pre class="language-text"><code>webView.evaluateJavascript(&quot;javascript:&quot; + name + &quot;(&quot; + jsonString + &quot;)&quot;, new ValueCallback&lt;String&gt;() {
+    @Override
+    public void onReceiveValue(String value){
+
+    }
+});
+</code></pre></div><h3 id="_1-1-3-对比">1.1.3. 对比</h3> <table><thead><tr><th>方法</th> <th>优势</th> <th>劣势</th></tr></thead> <tbody><tr><td>loadUrl</td> <td>支持所有版本</td> <td>1. 性能更差<br>2. 不支持注册回调<br>3. 会刷新页面</td></tr> <tr><td>evaluateJavascript</td> <td>1. 性能更高<br>2. 支持注册回调</td> <td>仅支持Kitkat (4.4 API 19)及更新版本</td></tr></tbody></table> <h2 id="_1-2-js调用native">1.2. JS调用Native</h2> <p>Javascript调用Native的方法目前主要有三种：</p> <ul><li>注入API</li> <li>拦截URL Scheme</li> <li>拦截Prompt</li></ul> <h3 id="_1-2-1-注入api-js上下文注入">1.2.1 注入API（JS上下文注入）</h3> <p>WebView提供了<code>addJavascriptInterface(interfaceObject, interfaceName)</code>方法（WebKit的原生API）来向JS暴露Native的API，可供JS调用访问。但该接口在API 17（Android 4.2）之前存在<a href="/FullStackRoad/Android/Hybrid/你不知道的WebView使用漏洞.html">安全漏洞</a>（若需要支持老版本的系统，不推荐使用该方案）。因此，为了规避这些安全漏洞，自API 17开始，Android默认限制了<code>addJavascriptInterface</code>中添加的方法的访问，需要通过注解<code>@JavascriptInterface</code>标注方法以后才能使用。</p> <div class="language- extra-class"><pre class="language-text"><code># Java
+@SuppressLint(&quot;JavascriptInterface&quot;)
+public class JsInterfaces {
+    @JavascriptInterface
+    public void showToast(String msg) {
+        Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
+    }
+
+    @JavascriptInterface
+    public void showLoading() {
+        if (mLoadingView != null) {
+            mLoadingView.showLoading();
+        }
+    }
+}
+
+WebView webview = findViewById(R.id.webView);
+webview.getSettings().setJavaScriptEnabled(true);
+webview.addJavascriptInterface(new JsInterfaces(), &quot;native&quot;);
+webview.loadUrl(xxx://xxx.html);
+
+# Javascript
+native.showLoading()
+</code></pre></div><h3 id="_1-2-2-拦截url-scheme">1.2.2. 拦截URL Scheme</h3> <p>Hybrid强调Android和iOS共用一套Web代码，因此，其基础控件需要处理不同系统间的差异，以及原生系统机制存在的缺陷。由此诞生了一些方案来优化和解决原生系统的默认方案。</p> <p>一个主流的方案是利用URL可拦截的机制，预先设定特定URL关键字与功能的映射MAP，在拦截URL时解析Scheme匹配对应的API。JavascriptBridge和Route是基于该机制实现的两类方案。</p> <h4 id="_1-2-2-1-jsbridge">1.2.2.1. JsBridge</h4> <p>大神Marcus Westin开源了一套用于iOS和OSX上的通信方案<a href="https://github.com/marcuswestin/WebViewJavascriptBridge" target="_blank" rel="noopener noreferrer">marcuswestin/WebViewJavascriptBridge<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，目前Facebook等多家公司都应用了该方案。</p> <blockquote><p>An iOS/OSX bridge for sending messages between Obj-C and JavaScript in UIWebViews/WebViews</p></blockquote> <p>Android下同类方案中最火的开源项目是<a href="https://github.com/lzyzsd/JsBridge" target="_blank" rel="noopener noreferrer">lzyzsd/JsBridge<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。在作者的描述中，其灵感来自于微信的webview jsbridge方案WeiXinJSBridge（现在被封装成JSSDK）。</p> <blockquote><p>android java and javascript bridge, inspired by wechat webview jsbridge</p></blockquote> <p>不清楚Bridge的方案最新起源与哪儿？</p> <p>没有完整看过<strong>marcuswestin/WebViewJavascriptBridge</strong>，但从网上博客中看到，其实现原理和用法与<strong>lzyzsd/JsBridge</strong>基本一致，差异主要在JS加载时机不同；以及iOS的Native可以获取Js方法的返回值，Android不行，参见<a href="https://www.jianshu.com/p/c565c8f93abd" target="_blank" rel="noopener noreferrer">聊一聊WebView与JS交互方案 - 适用Android &amp; iOS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>差异部分关键代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code># iOS - marcuswestin/WebViewJavascriptBridge
+function _fetchQueue() {
+   var messageQueueString = JSON.stringify(sendMessageQueue);
+   sendMessageQueue = [];
+   return messageQueueString;
+}
+
+# Andrid - lzyzsd/JsBridge
+function _fetchQueue() {      
+   var messageQueueString = JSON.stringify(sendMessageQueue);        
+   sendMessageQueue = [];    
+   // return messageQueueString;        
+   // Android无法直接返回数据, 这是与iOS最大的区别; 所以, 需要使用自定义url形式返回数据。     
+   messagingIframe.src = CUSTOM_PROTOCOL_SCHEME + '://return/_fetchQueue/' + encodeURIComponent(messageQueueString);   
+}
+</code></pre></div><blockquote><p>注：<strong>marcuswestin/WebViewJavascriptBridge</strong>定义的JS API文件是<code>./WebViewJavascriptBridge/WebViewJavascriptBridge_JS.m</code></p></blockquote> <p>因此，先直接从<strong>lzyzsd/JsBridge</strong>入手，搞明白其原理，再根据两者定义的JS API，扩展出自己的通信方案和API。</p> <p>JsBridge，通过<code>WebViewClient.shouldOverrideUrlLoading(webview, url)</code>中拦截特定URL，解析匹配对应的Native API，代表开源项目。</p> <h4 id="_1-2-2-2-router">1.2.2.2. Router</h4> <ul><li><a href="https://github.com/douban/rexxar-android" target="_blank" rel="noopener noreferrer">Route<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h4 id="_1-2-2-3-对比">1.2.2.3 对比</h4> <h3 id="_1-2-3-拦截prompt">1.2.3 拦截Prompt</h3> <p>除了通过<code>WebViewClient.shouldOverrideUrlLoading()</code>拦截URL Scheme，还可以通过<code>WebChromeClient.onJsAlert</code>，或<code>WebChromeClient.onJsConfirm</code>，或<code>WebChromeClient.onJsPrompt</code>拦截Js弹窗，因alert和confirm较为常用，因此这种拦截模式通常用prompt。</p> <blockquote><ul><li>WebChromeClient.onJsAlert，对应于js的alert(警告框)</li> <li>WebChromeClient.onJsConfirm，对应于js的comfirm(确认框)</li> <li>WebChromeClient.onJsPrompt，对应于js的prompt(提示框)</li></ul></blockquote> <p>其具体实现原理与拦截URL Scheme类似，只是在不同的地方去拦截。</p> <h3 id="_1-2-4-对比">1.2.4 对比</h3> <table><thead><tr><th>方式</th> <th>优势</th> <th>劣势</th></tr></thead> <tbody><tr><td>注入API</td> <td>官方接口，性能高</td> <td>Android 4.2 (API 17)以下存在安全漏洞</td></tr> <tr><td>拦截URL Scheme</td> <td>稳定，支持各种WebView</td> <td>1. URL长度限制<br>2. 连续发送时消息丢失<br>3. URL拦截时延高</td></tr> <tr><td>拦截Prompt</td> <td></td> <td>1. iOS的UIWebView不支持，其WKWebView才支持<br>2. 性能相对注入API更低？</td></tr></tbody></table> <h2 id="_1-3-自定义方案">1.3 自定义方案</h2> <p>Native与JS相互通信方案的最佳组合是<code>evaluateJavascript</code> + 注入API，但受限于Android的系统缺陷（注入API在Android 4.2 API 17以前有安全漏洞，evaluateJavascript从Android 4.4 API 19才开始支持），需要针对新老版本做取舍。</p> <p>目前考虑采用混合方案。</p> <ol><li>&gt;= Android 4.4 (API 19)，evaluateJavascript + 注入API</li> <li>&lt; Android 4.4 (API 19)，拦截URL Scheme（JsBridge or Route？？？）</li></ol> <p>选择API 19作为分界线是为了简化代码的复杂度。截止2020-2-13，API 16～18的装机量为3.2%，数量很少，没必要为了这么少的用户数来提升代码的复杂度。</p> <h1 id="参考资料">参考资料</h1> <p><a href="https://awhisper.github.io/2018/01/02/hybrid-jscomunication/" target="_blank" rel="noopener noreferrer">从零收拾一个hybrid框架（一）-- 从选择JS通信方案开始<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://www.jianshu.com/p/3a345d27cd42" target="_blank" rel="noopener noreferrer">你不知道的Android WebView使用漏洞<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://juejin.im/post/58a037df86b599006b3fade4" target="_blank" rel="noopener noreferrer">android WebView详解，常见漏洞详解和安全源码<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://www.jianshu.com/p/c565c8f93abd" target="_blank" rel="noopener noreferrer">聊一聊WebView与JS交互方案 - 适用Android &amp; iOS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/FullStackRoad/assets/js/app.8add03af.js" defer></script><script src="/FullStackRoad/assets/js/2.7ea6bbd6.js" defer></script><script src="/FullStackRoad/assets/js/8.19d26077.js" defer></script>
+  </body>
+</html>
